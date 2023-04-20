@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  db:
+    container_name: postgres
+    image: postgres
+    environment: # Now we pass some env vars that are used with Postgres
+      POSTGRES_USER: amigoscode
+      POSTGRES_PASSWORD: do
+      PGDATA: /data/postgres # WHERE to store our data. Ir will be an inner folder in the container called /data/postgress
+    volumes:
+      - db:/data/postgres
+    ports:
+      - "5332:5432"
+    networks:
+      - db
+    restart: unless-stopped
+networks:
+  db:
+    driver: bridge
+volumes:
+  db:
