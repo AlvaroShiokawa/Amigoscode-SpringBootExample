@@ -5,7 +5,7 @@ services:
     image: postgres
     environment: # Now we pass some env vars that are used with Postgres
       POSTGRES_USER: amigoscode
-      POSTGRES_PASSWORD: do
+      POSTGRES_PASSWORD: amigoscode
       PGDATA: /data/postgres # WHERE to store our data. Ir will be an inner folder in the container called /data/postgress
     volumes:
       - db:/data/postgres

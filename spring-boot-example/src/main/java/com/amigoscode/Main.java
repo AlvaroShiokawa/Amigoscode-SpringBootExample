@@ -46,7 +46,7 @@ public class Main {
             Integer age
     ){}
 
-    // We want to capture the request, which will be a JSON object, for usch we annotate our parameter with @RequestBody.
+    // We want to capture the request, which will be a JSON object, for such we annotate our parameter with @RequestBody.
     // Because of that our request will be mapped into this parameter of NewCustomerRequest class.
     @PostMapping
     public void addCustomer(@RequestBody NewCustomerRequest request) {
